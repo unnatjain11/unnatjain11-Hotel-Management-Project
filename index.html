@@ -1,0 +1,196 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Hotel Management</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="dhtmlxcalendar.css" />
+    <script src="dhtmlxcalendar.js"></script>
+
+    <style>
+      #calendar,
+      #calendar2 {
+        border: 1px;
+        font-family: Tahoma;
+        font-size: 12px;
+      }
+    </style>
+    <script>
+      var myCalendar;
+      function doOnLoad() {
+        myCalendar = new dhtmlXCalendarObject(["calendar", "calendar2"]);
+      }
+    </script>
+  </head>
+  <body onload="doOnLoad();">
+    <div id="holder">
+      <a href="https://www.co.in"
+        ><img
+          src="WhatsApp Image 2024-06-02 at 12.36.49 PM.jpeg"
+          width="200px"
+          height="100px"
+      /></a>
+      <div id="header">
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="overview.html">Overview</a></li>
+          <li><a href="restaurant.html">Restaurant</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+      <!--header -->
+      <br />
+      <div id="ab">
+        <div id="check">
+          <br />
+          <form action="check.php" method="post">
+            <div style="position: relative; height: 80px">
+              <label for="in">Check in:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+              <input
+                id="calendar"
+                name="in"
+                placeholder="2015-06-02"
+                required=""
+                type="text"
+              />
+              <br /><br />
+
+              <label for="in">Check out:</label> &nbsp;&nbsp;
+              <input
+                id="calendar2"
+                name="out"
+                placeholder="2015-06-05"
+                required=""
+                type="text"
+              />
+              <br /><br />
+            </div>
+            Room Type:
+            <select name="room">
+              <option value="A/C">A/C</option>
+              <option value="Non-A/C">Non-A/C</option>
+            </select>
+            <select name="type">
+              <option value="single">Single</option>
+              <option value="double">Double</option>
+              <option value="three">Three</option>
+            </select>
+            <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="btn" type="submit" name="submit" value="submit" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="btn1" type="reset" name="reset" value="Reset" />
+          </form>
+        </div>
+        <br />
+        <br />
+        <!--chack -->
+        &nbsp;
+        <div id="chat">
+          <form action="" method="post">
+            <label for="in">Chat</label>
+            <input id="chat" name="chat" placeholder="message" required="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="btn" type="submit" value="Submit" />
+          </form>
+        </div>
+        <!--chat-->
+        <br />
+        <br />
+        <br />
+        <br /><br />
+        <div id="fd">
+          <form action="feedback.php" method="post">
+            <label for="in">Feedback</label>
+            <input id="fd" name="feed" placeholder="Type message" required="" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v&nbsp;&nbsp;
+            <input class="btn" type="submit" name="submit" value="submit" />
+          </form>
+          <br /><br /><br /><br /><br />
+        </div>
+        <!--fd-->
+      </div>
+      <!--ab-->
+      <br clear="all" />
+      <div id="ac">
+        <h1>A/C</h1>
+        <div id="a">
+          <br />
+          &nbsp;
+          <h4>Single Rs.2000</h4>
+          &nbsp;
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--a-->
+        <div id="b">
+          <br />
+          &nbsp;
+          <h4>Double Rs.3000</h4>
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--b-->
+        <div id="c">
+          <br />
+          &nbsp;&nbsp;
+          <h4>Three Rs.5000</h4>
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--c-->
+      </div>
+      <!--ac-->
+
+      <div id="offer">
+        <h1>Special Offers</h1>
+        <div id="a1">
+          <p>&nbsp;</p>
+          Single Bed<br />
+          Three Booking<br />For <b>5</b>% discount
+        </div>
+        <!--a1-->
+        <div id="b1">
+          <p>&nbsp;</p>
+          Double Bed<br />
+          Three Booking<br />
+          For <b>10</b>% discount
+        </div>
+        <!--b1-->
+        <div id="c1">
+          <p>&nbsp;</p>
+          Three Bed<br />
+          Three Booking<br />
+          For <b>15</b>% discount
+        </div>
+        <!--c1-->
+      </div>
+      <!--offer-->
+      <div id="nonac">
+        <h1>Non-A/C</h1>
+        <div id="a2">
+          <p>&nbsp;</p>
+          <h4>Single Rs.1000</h4>
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--a2-->
+        <div id="b2">
+          <p>&nbsp;</p>
+          <h4>Double Rs.2000</h4>
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--b2-->
+        <div id="c2">
+          <p>&nbsp;</p>
+          <h4>Three Rs.3500</h4>
+          <a href="video.html"><input type="submit" value="View" /></a>
+          <a href="book.html"><input type="submit" value="Booking" /></a>
+        </div>
+        <!--c2-->
+      </div>
+      <!--nonac-->
+    </div>
+    <!--holder -->
+  </body>
+</html>
